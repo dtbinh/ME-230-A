@@ -1,0 +1,80 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{wu2004modeling}
+N.~Wu and M.~Zhou, ``Modeling and deadlock control of automated guided vehicle
+  systems,'' \emph{IEEE/ASME transactions on mechatronics}, vol.~9, no.~1, pp.
+  50--57, 2004.
+
+\bibitem{wang2009autonomous}
+J.~Wang, J.~Steiber, and B.~Surampudi, ``Autonomous ground vehicle control
+  system for high-speed and safe operation,'' \emph{International Journal of
+  Vehicle Autonomous Systems}, vol.~7, no. 1-2, pp. 18--35, 2009.
+
+\bibitem{oleari2014industrial}
+F.~Oleari, M.~Magnani, D.~Ronzoni, and L.~Sabattini, ``Industrial agvs: Toward
+  a pervasive diffusion in modern factory warehouses,'' in \emph{Intelligent
+  Computer Communication and Processing (ICCP), 2014 IEEE International
+  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp.
+  233--238.
+
+\bibitem{rawlings1999tutorial}
+J.~B. Rawlings, ``Tutorial: Model predictive control technology,'' in
+  \emph{American Control Conference, 1999. Proceedings of the 1999},
+  vol.~1.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 1999, pp. 662--676.
+
+\bibitem{mayne2000constrained}
+D.~Q. Mayne, J.~B. Rawlings, C.~V. Rao, and P.~O. Scokaert, ``Constrained model
+  predictive control: Stability and optimality,'' \emph{Automatica}, vol.~36,
+  no.~6, pp. 789--814, 2000.
+
+\bibitem{limon2006stability}
+D.~Lim{\'o}n, T.~Alamo, F.~Salas, and E.~F. Camacho, ``On the stability of
+  constrained mpc without terminal constraint,'' \emph{IEEE transactions on
+  automatic control}, vol.~51, no.~5, pp. 832--836, 2006.
+
+\bibitem{borrelli2005mpc}
+F.~Borrelli, P.~Falcone, T.~Keviczky, J.~Asgari, and D.~Hrovat, ``Mpc-based
+  approach to active steering for autonomous vehicle systems,''
+  \emph{International Journal of Vehicle Autonomous Systems}, vol.~3, no. 2-4,
+  pp. 265--291, 2005.
+
+\bibitem{liu2018convex}
+C.~Liu, C.-Y. Lin, and M.~Tomizuka, ``The convex feasible set algorithm for
+  real time optimization in motion planning,'' \emph{SIAM Journal on Control
+  and Optimization}, vol.~56, no.~4, pp. 2712--2733, 2018.
+
+\bibitem{hovgaard2013nonconvex}
+T.~G. Hovgaard, S.~Boyd, L.~F. Larsen, and J.~B. J{\o}rgensen, ``Nonconvex
+  model predictive control for commercial refrigeration,'' \emph{International
+  Journal of Control}, vol.~86, no.~8, pp. 1349--1366, 2013.
+
+\bibitem{chen2018foad}
+J.~Chen, C.~Liu, and M.~Tomizuka, ``Foad: Fast optimization-based autonomous
+  driving motion planner,'' in \emph{2018 Annual American Control Conference
+  (ACC)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 4725--4732.
+
+\bibitem{tassa2012synthesis}
+Y.~Tassa, T.~Erez, and E.~Todorov, ``Synthesis and stabilization of complex
+  behaviors through online trajectory optimization,'' in \emph{Intelligent
+  Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on}.\hskip
+  1em plus 0.5em minus 0.4em\relax IEEE, 2012, pp. 4906--4913.
+
+\end{thebibliography}

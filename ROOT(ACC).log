@@ -1,0 +1,1396 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.3)  13 DEC 2018 14:26
+entering extended mode
+**./ROOT(ACC).tex
+(ROOT(ACC).tex
+LaTeX2e <2018-04-01> patch level 5
+(ieeeconf.cls
+Document Class: ieeeconf 2016/4/23 revision V1.6b by Pradeep Misra
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count80
+\@IEEEtrantmpcountB=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 794.
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+\@IEEEnormalsizefontbaselineskip=\skip41
+-- This is a 10 point document.
+\normalsizebaselineskip=\skip42
+\normaljot=\skip43
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <16> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+\IEEEilabelindentA=\dimen104
+\IEEEilabelindentB=\dimen105
+\IEEEilabelindent=\dimen106
+\IEEEelabelindent=\dimen107
+\IEEEdlabelindent=\dimen108
+\labelindent=\dimen109
+\IEEEiednormlabelsep=\dimen110
+\IEEEiedmathlabelsep=\dimen111
+\IEEEiedtopsep=\skip44
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip45
+\belowcaptionskip=\skip46
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEtmpitemindent=\dimen112
+\c@biography=\count91
+\@IEEEtranrubishbin=\box26
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
+sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx.st
+y"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
+"
+Package: expl3 2018-11-19 L3 programming layer (loader) 
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3-cod
+e.tex"
+Package: expl3 2018-11-19 L3 programming layer (code)
+\c_max_int=\count92
+\l_tmpa_int=\count93
+\l_tmpb_int=\count94
+\g_tmpa_int=\count95
+\g_tmpb_int=\count96
+\g__kernel_prg_map_int=\count97
+\c_log_iow=\count98
+\l_iow_line_count_int=\count99
+\l__iow_line_target_int=\count100
+\l__iow_one_indent_int=\count101
+\l__iow_indent_int=\count102
+\c_zero_dim=\dimen115
+\c_max_dim=\dimen116
+\l_tmpa_dim=\dimen117
+\l_tmpb_dim=\dimen118
+\g_tmpa_dim=\dimen119
+\g_tmpb_dim=\dimen120
+\c_zero_skip=\skip47
+\c_max_skip=\skip48
+\l_tmpa_skip=\skip49
+\l_tmpb_skip=\skip50
+\g_tmpa_skip=\skip51
+\g_tmpb_skip=\skip52
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count103
+\l__intarray_loop_int=\count104
+\c__intarray_sp_dim=\dimen121
+\g__intarray_font_int=\count105
+\c__fp_leading_shift_int=\count106
+\c__fp_middle_shift_int=\count107
+\c__fp_trailing_shift_int=\count108
+\c__fp_big_leading_shift_int=\count109
+\c__fp_big_middle_shift_int=\count110
+\c__fp_big_trailing_shift_int=\count111
+\c__fp_Bigg_leading_shift_int=\count112
+\c__fp_Bigg_middle_shift_int=\count113
+\c__fp_Bigg_trailing_shift_int=\count114
+\c__kernel_randint_max_int=\count115
+\g__fp_array_int=\count116
+\l__fp_array_loop_int=\count117
+\l__sort_length_int=\count118
+\l__sort_min_int=\count119
+\l__sort_top_int=\count120
+\l__sort_max_int=\count121
+\l__sort_true_max_int=\count122
+\l__sort_block_int=\count123
+\l__sort_begin_int=\count124
+\l__sort_end_int=\count125
+\l__sort_A_int=\count126
+\l__sort_B_int=\count127
+\l__sort_C_int=\count128
+\l__tl_analysis_normal_int=\count129
+\l__tl_analysis_index_int=\count130
+\l__tl_analysis_nesting_int=\count131
+\l__tl_analysis_type_int=\count132
+\l__regex_internal_a_int=\count133
+\l__regex_internal_b_int=\count134
+\l__regex_internal_c_int=\count135
+\l__regex_balance_int=\count136
+\l__regex_group_level_int=\count137
+\l__regex_mode_int=\count138
+\c__regex_cs_in_class_mode_int=\count139
+\c__regex_cs_mode_int=\count140
+\l__regex_catcodes_int=\count141
+\l__regex_default_catcodes_int=\count142
+\c__regex_catcode_D_int=\count143
+\c__regex_catcode_S_int=\count144
+\c__regex_catcode_L_int=\count145
+\c__regex_catcode_O_int=\count146
+\c__regex_catcode_A_int=\count147
+\c__regex_all_catcodes_int=\count148
+\l__regex_show_lines_int=\count149
+\l__regex_min_state_int=\count150
+\l__regex_max_state_int=\count151
+\l__regex_left_state_int=\count152
+\l__regex_right_state_int=\count153
+\l__regex_capturing_group_int=\count154
+\l__regex_min_pos_int=\count155
+\l__regex_max_pos_int=\count156
+\l__regex_curr_pos_int=\count157
+\l__regex_start_pos_int=\count158
+\l__regex_success_pos_int=\count159
+\l__regex_curr_char_int=\count160
+\l__regex_curr_catcode_int=\count161
+\l__regex_last_char_int=\count162
+\l__regex_case_changed_char_int=\count163
+\l__regex_curr_state_int=\count164
+\l__regex_step_int=\count165
+\l__regex_min_active_int=\count166
+\l__regex_max_active_int=\count167
+\l__regex_replacement_csnames_int=\count168
+\l__regex_match_count_int=\count169
+\l__regex_min_submatch_int=\count170
+\l__regex_submatch_int=\count171
+\l__regex_zeroth_submatch_int=\count172
+\g__regex_trace_regex_int=\count173
+\c_empty_box=\box27
+\l_tmpa_box=\box28
+\l_tmpb_box=\box29
+\g_tmpa_box=\box30
+\g_tmpb_box=\box31
+\l__box_top_dim=\dimen122
+\l__box_bottom_dim=\dimen123
+\l__box_left_dim=\dimen124
+\l__box_right_dim=\dimen125
+\l__box_top_new_dim=\dimen126
+\l__box_bottom_new_dim=\dimen127
+\l__box_left_new_dim=\dimen128
+\l__box_right_new_dim=\dimen129
+\l__box_internal_box=\box32
+\l__coffin_internal_box=\box33
+\l__coffin_internal_dim=\dimen130
+\l__coffin_offset_x_dim=\dimen131
+\l__coffin_offset_y_dim=\dimen132
+\l__coffin_x_dim=\dimen133
+\l__coffin_y_dim=\dimen134
+\l__coffin_x_prime_dim=\dimen135
+\l__coffin_y_prime_dim=\dimen136
+\c_empty_coffin=\box34
+\l__coffin_aligned_coffin=\box35
+\l__coffin_aligned_internal_coffin=\box36
+\l_tmpa_coffin=\box37
+\l_tmpb_coffin=\box38
+\l__coffin_display_coffin=\box39
+\l__coffin_display_coord_coffin=\box40
+\l__coffin_display_pole_coffin=\box41
+\l__coffin_display_offset_dim=\dimen137
+\l__coffin_display_x_dim=\dimen138
+\l__coffin_display_y_dim=\dimen139
+\g__file_internal_ior=\read1
+\l__coffin_bounding_shift_dim=\dimen140
+\l__coffin_left_corner_dim=\dimen141
+\l__coffin_right_corner_dim=\dimen142
+\l__coffin_bottom_corner_dim=\dimen143
+\l__coffin_top_corner_dim=\dimen144
+\l__coffin_scaled_total_height_dim=\dimen145
+\l__coffin_scaled_width_dim=\dimen146
+\l__seq_internal_a_int=\count174
+\l__seq_internal_b_int=\count175
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode
+.def"
+File: l3pdfmode.def 2018-11-19 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count176
+))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\xparse\
+xparse.sty"
+Package: xparse 2018-10-17 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count177
+\g__xparse_grabber_int=\count178
+\l__xparse_m_args_int=\count179
+\l__xparse_mandatory_args_int=\count180
+\l__xparse_v_nesting_int=\count181
+)
+Package: siunitx 2018/05/17 v2.7s A comprehensive (SI) units package
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.st
+y"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen147
+)) ("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty
+"
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+\col@sep=\dimen148
+\ar@mcellbox=\box42
+\extrarowheight=\dimen149
+\NC@list=\toks17
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box43
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\l3keys2
+e\l3keys2e.sty"
+Package: l3keys2e 2018-10-17 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box44
+\l__siunitx_tmp_dim=\dimen150
+\l__siunitx_tmp_int=\count182
+\l__siunitx_number_mantissa_length_int=\count183
+\l__siunitx_number_uncert_length_int=\count184
+\l__siunitx_round_int=\count185
+\l__siunitx_process_decimal_int=\count186
+\l__siunitx_process_uncertainty_int=\count187
+\l__siunitx_process_fixed_int=\count188
+\l__siunitx_process_integer_min_int=\count189
+\l__siunitx_process_precision_int=\count190
+\l__siunitx_group_min_int=\count191
+\l__siunitx_angle_marker_box=\box45
+\l__siunitx_angle_unit_box=\box46
+\l__siunitx_angle_marker_dim=\dimen151
+\l__siunitx_angle_unit_dim=\dimen152
+\l__siunitx_unit_int=\count192
+\l__siunitx_unit_denominator_int=\count193
+\l__siunitx_unit_numerator_int=\count194
+\l__siunitx_unit_prefix_int=\count195
+\l__siunitx_unit_prefix_base_int=\count196
+\l__siunitx_unit_prefix_gram_int=\count197
+\l__siunitx_number_product_int=\count198
+\c__siunitx_one_fill_skip=\skip55
+\l__siunitx_table_unit_align_skip=\skip56
+\l__siunitx_table_exponent_dim=\dimen153
+\l__siunitx_table_integer_dim=\dimen154
+\l__siunitx_table_mantissa_dim=\dimen155
+\l__siunitx_table_marker_dim=\dimen156
+\l__siunitx_table_result_dim=\dimen157
+\l__siunitx_table_uncert_dim=\dimen158
+\l__siunitx_table_fill_pre_dim=\dimen159
+\l__siunitx_table_fill_post_dim=\dimen160
+\l__siunitx_table_fill_mid_dim=\dimen161
+\l__siunitx_table_pre_box=\box47
+\l__siunitx_table_post_box=\box48
+\l__siunitx_table_mantissa_box=\box49
+\l__siunitx_table_result_box=\box50
+\l__siunitx_table_number_align_skip=\skip57
+\l__siunitx_table_text_align_skip=\skip58
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\translator\transla
+tor.sty"
+Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
+))
+
+Package siunitx Warning: Version 1 option 'per' detected.
+
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx-ve
+rsion-1.cfg"
+File: siunitx-version-1.cfg 2017/11/26 v2.7k siunitx: Version 1 settings
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\
+tikz.sty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf
+.sty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfr
+cs.sty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-common.tex"
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen162
+\pgfutil@tempdimb=\dimen163
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-common-lists.tex"))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-latex.def"
+\pgfutil@abb=\box51
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+frcs.code.tex"
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf
+core.sty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\pg
+fsys.sty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys.code.tex"
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeys.code.tex"
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks21
+))
+\pgf@x=\dimen164
+\pgf@y=\dimen165
+\pgf@xa=\dimen166
+\pgf@ya=\dimen167
+\pgf@xb=\dimen168
+\pgf@yb=\dimen169
+\pgf@xc=\dimen170
+\pgf@yc=\dimen171
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count199
+\c@pgf@countb=\count266
+\c@pgf@countc=\count267
+\c@pgf@countd=\count268
+\t@pgf@toka=\toks22
+\t@pgf@tokb=\toks23
+\t@pgf@tokc=\toks24
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgf.cfg"
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count269
+\pgfsyssoftpath@bigbuffer@items=\count270
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color
+.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcore.code.tex"
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+calc.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+util.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+parser.code.tex"
+\pgfmath@dimen=\dimen172
+\pgfmath@count=\count271
+\pgfmath@box=\box52
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.basic.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.trigonometric.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.random.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.comparison.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.base.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.round.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.misc.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.integerarithmetics.code.tex")))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+float.code.tex"
+\c@pgfmathroundto@lastzeros=\count272
+))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen173
+\pgf@picmaxx=\dimen174
+\pgf@picminy=\dimen175
+\pgf@picmaxy=\dimen176
+\pgf@pathminx=\dimen177
+\pgf@pathmaxx=\dimen178
+\pgf@pathminy=\dimen179
+\pgf@pathmaxy=\dimen180
+\pgf@xx=\dimen181
+\pgf@xy=\dimen182
+\pgf@yx=\dimen183
+\pgf@yy=\dimen184
+\pgf@zx=\dimen185
+\pgf@zy=\dimen186
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen187
+\pgf@path@lasty=\dimen188
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen189
+\pgf@shorten@start@additional=\dimen190
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box53
+\pgf@hbox=\box54
+\pgf@layerbox@main=\box55
+\pgf@picture@serial@count=\count273
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen191
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen192
+\pgf@pt@y=\dimen193
+\pgf@pt@temp=\dimen194
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorequick.code.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen195
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen196
+\pgf@sys@shading@range@num=\count274
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box56
+))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+oduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box57
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+oduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\
+pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen197
+\pgf@nodesepend=\dimen198
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\
+pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgff
+or.sty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfk
+eys.sty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeys.code.tex"))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.s
+ty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex"))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+ffor.code.tex"
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex")
+\pgffor@iter=\dimen199
+\pgffor@skip=\dimen256
+\pgffor@stack=\toks28
+\pgffor@toks=\toks29
+))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\tikz.code.tex"
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pg
+flibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count275
+\pgfplotmarksize=\dimen257
+)
+\tikz@lastx=\dimen258
+\tikz@lasty=\dimen259
+\tikz@lastxsaved=\dimen260
+\tikz@lastysaved=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
+\tikz@figbox=\box58
+\tikz@figbox@bg=\box59
+\tikz@tempbox=\box60
+\tikz@tempbox@bg=\box61
+\tikztreelevel=\count276
+\tikznumberofchildren=\count277
+\tikznumberofcurrentchild=\count278
+\tikz@fig@count=\count279
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+odulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count280
+\pgfmatrixcurrentcolumn=\count281
+\pgf@matrix@numberofcolumns=\count282
+)
+\tikz@expandcount=\count283
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.
+sty"
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
+rr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefin
+ekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetke
+ys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmd
+s.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluate
+x.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
+ty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\comment\comment.st
+y"
+\CommentStream=\write4
+ Excluding comment 'comment')
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+Package subfig Warning: Your document class has a bad definition
+ of \endfigure, most likely
+ \let\endfigure=\end@float
+ which has now been changed to
+ \def\endfigure{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endfigure.
+ Please complain to your document class author.
+
+
+Package subfig Warning: Your document class has a bad definition
+ of \endtable, most likely
+ \let\endtable=\end@float
+ which has now been changed to
+ \def\endtable{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endtable.
+ Please complain to your document class author.
+
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.st
+y"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.s
+ty"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen264
+\captionmargin@=\dimen265
+\captionwidth=\dimen266
+\caption@tempdima=\dimen267
+\caption@indent=\dimen268
+\caption@parindent=\dimen269
+\caption@hangindent=\dimen270
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \begin {center}{\footnotesize #1}\\{\footnotesize \scshape #2}\end {c
+enter}\@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@te
+mpboxa \hbox {\footnotesize #1.~~ #2}\ifdim \wd \@tempboxa >\hsize \setbox \@te
+mpboxa \hbox {\footnotesize #1.~~ }\parbox [t]{\hsize }{\footnotesize \noindent
+ \unhbox \@tempboxa #2}\else \ifcenterfigcaptions \hbox to\hsize {\footnotesize
+ \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\footnotesize \box \@tempbo
+xa \hfil }\fi \fi \fi .
+\c@caption@flags=\count284
+\c@ContinuedFloat=\count285
+)
+\c@KVtest=\count286
+\sf@farskip=\skip59
+\sf@captopadj=\dimen271
+\sf@capskip=\skip60
+\sf@nearskip=\skip61
+\c@subfigure=\count287
+\c@subfigure@save=\count288
+\c@lofdepth=\count289
+\c@subtable=\count290
+\c@subtable@save=\count291
+\c@lotdepth=\count292
+\sf@top=\skip62
+\sf@bottom=\skip63
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgfplots\pgfplots.
+sty"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.revision.tex")
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+score.code.tex"
+\t@pgfplots@toka=\toks30
+\t@pgfplots@tokb=\toks31
+\t@pgfplots@tokc=\toks32
+\pgfplots@tmpa=\dimen272
+\c@pgfplots@coordindex=\count293
+\c@pgfplots@scanlineindex=\count294
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\sys\pgf
+plotssysgeneric.code.tex"))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\libs\pg
+fplotslibrary.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpgfc
+ompatib\pgfplotsoldpgfsupp_loader.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pg
+flibraryfpu.code.tex")
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpgfc
+ompatib\pgfplotsoldpgfsupp_pgflibraryfpu.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpgfc
+ompatib\pgfplotsoldpgfsupp_pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count295
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpgfc
+ompatib\pgfplotsoldpgfsupp_leq.code.tex"))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotsutil.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsliststructure.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsliststructureext.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsarray.code.tex"
+\c@pgfplotsarray@tmp=\count296
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsmatrix.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\numtabl
+e\pgfplotstableshared.code.tex"
+\c@pgfplotstable@counta=\count297
+\t@pgfplotstable@a=\toks33
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsdeque.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotsbinary.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotsbinary.data.code.tex"))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotsutil.verb.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\libs\pg
+flibrarypgfplots.surfshading.code.tex"
+\c@pgfplotslibrarysurf@no=\count298
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\sys\pgf
+librarypgfplots.surfshading.pgfsys-pdftex.def")))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotscolormap.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotscolor.code.tex"))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+sstackedplots.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+splothandlers.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+smeshplothandler.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+smeshplotimage.code.tex")))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.scaling.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+scoordprocessing.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.errorbars.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.markers.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+sticks.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.paths.code.tex")
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarydecorations.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+oduledecorations.code.tex"
+\pgfdecoratedcompleteddistance=\dimen273
+\pgfdecoratedremainingdistance=\dimen274
+\pgfdecoratedinputsegmentcompleteddistance=\dimen275
+\pgfdecoratedinputsegmentremainingdistance=\dimen276
+\pgf@decorate@distancetomove=\dimen277
+\pgf@decorate@repeatstate=\count299
+\pgfdecorationsegmentamplitude=\dimen278
+\pgfdecorationsegmentlength=\dimen279
+)
+\tikz@lib@dec@box=\box62
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\de
+corations\pgflibrarydecorations.pathmorphing.code.tex"))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex"
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\de
+corations\pgflibrarydecorations.pathreplacing.code.tex"))
+\pgfplots@numplots=\count300
+\pgfplots@xmin@reg=\dimen280
+\pgfplots@xmax@reg=\dimen281
+\pgfplots@ymin@reg=\dimen282
+\pgfplots@ymax@reg=\dimen283
+\pgfplots@zmin@reg=\dimen284
+\pgfplots@zmax@reg=\dimen285
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibraryplotmarks.code.tex"
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pg
+flibraryplotmarks.code.tex"
+File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+)))
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.st
+y"
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip64
+
+For additional information on amsmath, use the `?' option.
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen286
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count301
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count302
+\leftroot@=\count303
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count304
+\DOTSCASE@=\count305
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box63
+\strutbox@=\box64
+\big@size=\dimen287
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count306
+\c@MaxMatrixCols=\count307
+\dotsspace@=\muskip16
+\c@parentequation=\count308
+\dspbrk@lvl=\count309
+\tag@help=\toks34
+\row@=\count310
+\column@=\count311
+\maxfields@=\count312
+\andhelp@=\toks35
+\eqnshift@=\dimen288
+\alignsep@=\dimen289
+\tagshift@=\dimen290
+\tagwidth@=\dimen291
+\totwidth@=\dimen292
+\lineht@=\dimen293
+\@envbody=\toks36
+\multlinegap=\skip65
+\multlinetaggap=\skip66
+\mathdisplay@stack=\toks37
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.
+sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.s
+ty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+\c@assumption=\count313
+
+** ATTENTION: Overriding command lockouts (line 30).
+** ATTENTION: Overriding IEEE standard margins (line 33).
+(ROOT(ACC).aux)
+\openout1 = `ROOT(ACC).aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+ii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count314
+\scratchdimen=\dimen294
+\scratchbox=\box65
+\nofMPsegments=\count315
+\nofMParguments=\count316
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count317
+\MPscratchDim=\dimen295
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
+\everyMPtoPDFconversion=\toks39
+)
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+ ("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\translator\transla
+tor-basic-dictionary-English.dict"
+Dictionary: translator-basic-dictionary, Language: English 
+)
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx-ab
+breviations.cfg"
+File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
+) ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
+your preamble.
+ on input line 65.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 69.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 69.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
+(Font)              size <17.28> substituted on input line 69.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 69.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 69.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 69.
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 69.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 69.
+("C:\Users\jessl\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[][][]$[]$\OT1/ptm/m/n/8 Jessica Leu is with the De-part-ment of Elec-tri-cal E
+n-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+\OT1/ptm/m/n/8 gi-neer-ing, Uni-ver-sity of Cal-i-for-nia, Berke-ley, CA 94720
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 95--96
+[]\OT1/ptm/m/n/10 The re-main-der of the pa-per is or-ga-nized as fol-
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 95--96
+\OT1/ptm/m/n/10 tion III shows sim-u-la-tion re-sults. Sec-tion IV shows
+ []
+
+
+Underfull \hbox (badness 4518) in paragraph at lines 95--96
+\OT1/ptm/m/n/10 the ex-per-i-ment re-sult (code is pub-licly avail-able at
+ []
+
+[1{C:/Users/jessl/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+<src/MPCstruc.png, id=17, 596.4684pt x 165.7392pt>
+File: src/MPCstruc.png Graphic file (type png)
+<use src/MPCstruc.png>
+Package pdftex.def Info: src/MPCstruc.png  used on input line 101.
+(pdftex.def)             Requested size: 227.62204pt x 63.2496pt.
+
+
+pdfTeX warning: pdflatex (file ./plot/MPCsystem.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
+<plot/MPCsystem.pdf, id=18, 513.45226pt x 441.71031pt>
+File: plot/MPCsystem.pdf Graphic file (type pdf)
+<use plot/MPCsystem.pdf>
+Package pdftex.def Info: plot/MPCsystem.pdf  used on input line 109.
+(pdftex.def)             Requested size: 170.71652pt x 146.86345pt.
+
+
+pdfTeX warning: pdflatex (file ./plot/slack.pdf): PDF inclusion: found PDF vers
+ion <1.7>, but at most version <1.5> allowed
+<plot/slack.pdf, id=19, 381.08272pt x 215.48204pt>
+File: plot/slack.pdf Graphic file (type pdf)
+<use plot/slack.pdf>
+Package pdftex.def Info: plot/slack.pdf  used on input line 116.
+(pdftex.def)             Requested size: 142.26378pt x 80.44058pt.
+[2 <./src/MPCstruc.png> <./plot/MPCsystem.pdf> <./plot/slack.pdf
+
+pdfTeX warning: pdflatex (file ./plot/slack.pdf): PDF inclusion: multiple pdfs 
+with page group included in a single page
+>]
+<src/Mstable.png, id=64, 823.878pt x 362.7954pt>
+File: src/Mstable.png Graphic file (type png)
+<use src/Mstable.png>
+Package pdftex.def Info: src/Mstable.png  used on input line 165.
+(pdftex.def)             Requested size: 256.0748pt x 112.7588pt.
+
+Overfull \hbox (10.35669pt too wide) in paragraph at lines 165--166
+ [] 
+ []
+
+
+Overfull \hbox (7.46172pt too wide) detected at line 187
+[]
+ []
+
+
+Underfull \vbox (badness 1540) has occurred while \output is active []
+
+ [3 <./src/Mstable.png>] (plot/single.tex
+Missing character: There is no ; in font nullfont!
+) (plot/singleM.tex) (plot/simgleM_2.tex)
+<src/1_3_path.png, id=72, 596.4684pt x 165.7392pt>
+File: src/1_3_path.png Graphic file (type png)
+<use src/1_3_path.png>
+Package pdftex.def Info: src/1_3_path.png  used on input line 248.
+(pdftex.def)             Requested size: 227.62204pt x 63.2496pt.
+
+(plot/cost_vs_path.tex) (plot/multi.tex) (plot/multiM.tex) [4] (plot/move.tex)
+(plot/moveM.tex) (plot/bad1.tex) (plot/bad1_M.tex) (plot/M_max.tex) [5 <./src/1
+_3_path.png>] (plot/M_H.tex)
+<plot/tu1.jpg, id=83, 395.97937pt x 296.60812pt>
+File: plot/tu1.jpg Graphic file (type jpg)
+<use plot/tu1.jpg>
+Package pdftex.def Info: plot/tu1.jpg  used on input line 347.
+(pdftex.def)             Requested size: 151.76854pt x 113.68079pt.
+<plot/tu2.png, id=84, 395.5578pt x 296.7888pt>
+File: plot/tu2.png Graphic file (type png)
+<use plot/tu2.png>
+Package pdftex.def Info: plot/tu2.png  used on input line 351.
+(pdftex.def)             Requested size: 151.76854pt x 113.87231pt.
+<plot/tu3.png, id=85, 395.5578pt x 296.7888pt>
+File: plot/tu3.png Graphic file (type png)
+<use plot/tu3.png>
+Package pdftex.def Info: plot/tu3.png  used on input line 355.
+(pdftex.def)             Requested size: 151.76854pt x 113.87231pt.
+<plot/tu4.png, id=86, 395.5578pt x 296.7888pt>
+File: plot/tu4.png Graphic file (type png)
+<use plot/tu4.png>
+Package pdftex.def Info: plot/tu4.png  used on input line 359.
+(pdftex.def)             Requested size: 151.76854pt x 113.87231pt.
+<plot/tu5.png, id=87, 395.5578pt x 296.7888pt>
+File: plot/tu5.png Graphic file (type png)
+<use plot/tu5.png>
+Package pdftex.def Info: plot/tu5.png  used on input line 363.
+(pdftex.def)             Requested size: 151.76854pt x 113.87231pt.
+<plot/tu6.png, id=88, 395.5578pt x 296.7888pt>
+File: plot/tu6.png Graphic file (type png)
+<use plot/tu6.png>
+Package pdftex.def Info: plot/tu6.png  used on input line 367.
+(pdftex.def)             Requested size: 151.76854pt x 113.87231pt.
+ (plot/video.tex
+Missing character: There is no ; in font nullfont!
+)
+Package epstopdf Info: Source file: <plot/video_nice.eps>
+(epstopdf)                    date: 2018-12-13 14:14:08
+(epstopdf)                    size: 54415 bytes
+(epstopdf)             Output file: <plot/video_nice-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-13 14:15:30
+(epstopdf)                    size: 19010 bytes
+(epstopdf)             Command: <epstopdf --outfile=plot/video_nice-eps-convert
+ed-to.pdf plot/video_nice.eps>
+(epstopdf)             \includegraphics on input line 400.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./plot/video_nice-eps-converted-to.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<plot/video_nice-eps-converted-to.pdf, id=89, 397.485pt x 151.56625pt>
+File: plot/video_nice-eps-converted-to.pdf Graphic file (type pdf)
+<use plot/video_nice-eps-converted-to.pdf>
+Package pdftex.def Info: plot/video_nice-eps-converted-to.pdf  used on input li
+ne 400.
+(pdftex.def)             Requested size: 256.0748pt x 97.64731pt.
+
+Overfull \hbox (10.35669pt too wide) in paragraph at lines 400--401
+ [][] 
+ []
+
+(plot/videoM.tex) (ROOT(ACC).bbl [6])
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the US letter (8.5in X 11in) paper size.
+
+[7 <./plot/tu1.jpg> <./plot/tu2.png> <./plot/tu3.png> <./plot/tu4.png> <./plot/
+tu5.png> <./plot/tu6.png> <./plot/video_nice-eps-converted-to.pdf>]
+(ROOT(ACC).aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 37751 strings out of 492970
+ 910124 string characters out of 3126594
+ 1843427 words of memory out of 3000000
+ 41093 multiletter control sequences out of 15000+200000
+ 582073 words of font info for 147 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 62i,21n,111p,1695b,2786s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+}<C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx7.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jessl/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jessl/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jess
+l/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C
+:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/jessl/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jessl/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/
+jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb
+><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr7.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jessl/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/jessl/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jessl/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C
+:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.
+pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utm
+b8a.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times
+/utmbi8a.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
+times/utmr8a.pfb><C:/Users/jessl/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+urw/times/utmri8a.pfb>
+Output written on ROOT(ACC).pdf (7 pages, 5477232 bytes).
+PDF statistics:
+ 182 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+
