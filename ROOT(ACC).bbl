@@ -61,10 +61,49 @@ C.~Liu, C.-Y. Lin, and M.~Tomizuka, ``The convex feasible set algorithm for
   real time optimization in motion planning,'' \emph{SIAM Journal on Control
   and Optimization}, vol.~56, no.~4, pp. 2712--2733, 2018.
 
-\bibitem{hovgaard2013nonconvex}
-T.~G. Hovgaard, S.~Boyd, L.~F. Larsen, and J.~B. J{\o}rgensen, ``Nonconvex
-  model predictive control for commercial refrigeration,'' \emph{International
-  Journal of Control}, vol.~86, no.~8, pp. 1349--1366, 2013.
+\bibitem{chisci2001systems}
+L.~Chisci, J.~A. Rossiter, and G.~Zappa, ``Systems with persistent
+  disturbances: predictive control with restricted constraints,''
+  \emph{Automatica}, vol.~37, no.~7, pp. 1019--1028, 2001.
+
+\bibitem{kuwata2007distributed}
+Y.~Kuwata, A.~Richards, T.~Schouwenaars, and J.~P. How, ``Distributed robust
+  receding horizon control for multivehicle guidance,'' \emph{IEEE Transactions
+  on Control Systems Technology}, vol.~15, no.~4, pp. 627--641, 2007.
+
+\bibitem{luders2010chance}
+B.~Luders, M.~Kothari, and J.~How, ``Chance constrained rrt for probabilistic
+  robustness to environmental uncertainty,'' in \emph{AIAA guidance,
+  navigation, and control conference}, 2010, p. 8160.
+
+\bibitem{goodrich2008human}
+M.~A. Goodrich, A.~C. Schultz, \emph{et~al.}, ``Human--robot interaction: a
+  survey,'' \emph{Foundations and Trends{\textregistered} in Human--Computer
+  Interaction}, vol.~1, no.~3, pp. 203--275, 2008.
+
+\bibitem{kruse2013human}
+T.~Kruse, A.~K. Pandey, R.~Alami, and A.~Kirsch, ``Human-aware robot
+  navigation: A survey,'' \emph{Robotics and Autonomous Systems}, vol.~61,
+  no.~12, pp. 1726--1743, 2013.
+
+\bibitem{y2018a}
+Y.~Cheng, C.~Liu, W.~Zhao, and M.~Tomizuka, ``Human motion prediction using
+  adaptable neural networks,'' in \emph{arXiv:1810.00781}.
+
+\bibitem{butepage2017anticipating}
+J.~B{\"u}tepage, H.~Kjellstr{\"o}m, and D.~Kragic, ``Anticipating many futures:
+  Online human motion prediction and synthesis for human-robot collaboration,''
+  \emph{arXiv preprint arXiv:1702.08212}, 2017.
+
+\bibitem{kumar2013learning}
+P.~Kumar, M.~Perrollaz, S.~Lefevre, and C.~Laugier, ``Learning-based approach
+  for online lane change intention prediction,'' in \emph{Intelligent Vehicles
+  Symposium (IV), 2013 IEEE}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2013, pp. 797--802.
+
+\bibitem{jess2018mstable}
+J.~Leu, C.~Liu, and M.~Tomizuka, ``M-analysis for non-convex motion planning
+  using mpc framework,'' in \emph{in submission}.
 
 \bibitem{chen2018foad}
 J.~Chen, C.~Liu, and M.~Tomizuka, ``Foad: Fast optimization-based autonomous

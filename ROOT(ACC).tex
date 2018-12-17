@@ -14,6 +14,12 @@
 \usepackage{tikz}
 
 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\usepackage{comment}
 
 \usepackage{epstopdf}
 \usepackage{comment}
@@ -26,7 +32,7 @@
   {
     \newtheorem{assumption}{Assumption}
   }
-
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
 \IEEEoverridecommandlockouts                              % This command is only needed if 
                                                           % you want to use the \thanks command
 
@@ -52,7 +58,7 @@
 %\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-$M$-Analysis for non-convex motion planning using MPC framework*
+EUA-MPC: Mothin planning for robots in industrial HRI system  
 }
 
 
@@ -74,23 +80,31 @@ Berkeley, CA 94720 USA{\tt\small jess.leu24@berkeley.edu}}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-Real-time, safe, and stable motion planning in cluttered environments remains challenging due to the non-convexity of the problem. This paper investigates motion planning in the framework of model predictive control (MPC). As there are many local optima due to non-convexity, it is important to guarantee stability of the non-convex MPC such that the trajectories will not jump around multiple local optima. In order to analyze such a stability problem, a notion of $M$-analysis is introduced in this paper, which guarantees finite convergence (at least $M$ steps ahead) of the planned trajectories. With such notion, we verify the stability properties of a non-convex MPC which implements the convex feasible set algorithm (CFS) at every MPC step through extensive simulations and experiments. The $M$-analysis for stability properties provides a tractable tool to understand dynamics of non-convex MPC.
+Real-time, safe, and stable motion planning in dynamic HRI system remains challenging due to the non-convexity and time variance of the problem. This paper presents an approach to formulate a set of dynamic environments in a environment uncertainty adaptive model predictive control (EUA-MPC) problem. To achieve this, a filtering-based method, which guarantees closed-loop stability of MPC, is used to predict the motion of the human. Also, the closed-loop performance is investigated using a notion of $M$-analysis, which guarantees finite convergence (at least $M$ steps ahead) of the open-loop trajectories to the closed-loop trajectory. With such notion, we verify the performance of the EUA-MPC at every executing time step through extensive simulations and experiments. With the proposed EUA-MPC, it is shown that closed-loop cost is reduced and open-loop trajectories converge faster to the closed-loop trajectory.
 \end{abstract}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{INTRODUCTION}
 
-The development of intelligent robots and autonomous vehicles is craving for real-time, safe, and stable motion planning in cluttered dynamic environments. For example, an automated guided vehicle (AGV) on factory floors \cite{wu2004modeling} needs to decide in real time how to bypass multiple human workers and a set of obstacles in the environment in order to approach its target efficiently \cite{wang2009autonomous,oleari2014industrial}. 
+The development of intelligent robots and autonomous vehicles is craving for real-time, safe, and stable motion planning in cluttered dynamic environments. For example, an automated guided vehicle (AGV) in industrial human-robot interaction (HRI) system \cite{wu2004modeling}, needs to decide in real time how to bypass multiple human workers and a set of obstacles in the environment in order to approach its target efficiently \cite{wang2009autonomous,oleari2014industrial}. 
 
 In literature, motion planning algorithms usually fall into three categories: graph-search based algorithm, sampling-based algorithm, and optimization-based algorithm. Among these algorithms, this paper focus on model predictive control (MPC) \cite{rawlings1999tutorial}, an optimization-based algorithm. MPC has been widely adopted both in academia research and in industrial applications. The fact that MPC controller observes the environment every time before solving the optimization problem allows the system to adjust and re-plan according to the changes of the environment. Its ability to handle input and state constraints also makes it popular in addressing motion planning problems. If the problem is a convex MPC problem, the stability of the closed loop system can be guaranteed by modifying prediction horizon, adding terminal cost, adding terminal equality constraint, or using terminal set constraint instead \cite{mayne2000constrained}, \cite{limon2006stability}. These methods can guarantee that the calculated commands and the resulting states are bounded in the presence of bounded disturbance. One common application of motion planning MPC problem is autonomous vehicles \cite{borrelli2005mpc}. In literatures, stability is guaranteed by setting stability boundary for the control system, i.e., stability is quantified at several vehicle speeds.
 
-However, the existence of obstacles in the environment introduces non-convex state constraints, which results in non-convex MPC problems. It is still challenging to obtain real-time, safe and stable solutions for non-convex MPCs. An efficient optimization algorithm, i.e., the convex feasible set (CFS) algorithm \cite{liu2018convex}, has been proposed to obtain a safe open-loop trajectory in real time. However, there are many local optima due to non-convexity. Therefore, even the trajectory calculated by CFS at each MPC time step is feasible and smooth, it is possible that the trajectories planned at different time steps will jump around multiple local optima causing the implemented trajectory to be dynamically unreasonable for the robot. Dynamically unreasonable trajectory will cause the robot to execute violent or zigzagging movement that is harmful to the robot's motors and also scares human in the environment. Some work focused on MPC problems with non-convex cost function using the sequential convex optimization method \cite{hovgaard2013nonconvex}. Although the result is promising, the difficulty of ensuring closed-loop stability and analyzing controller performance for non-convex MPC is also mentioned in the literature. 
+However, two nature of motion planning in dynamic environments contaminated the stability properties of MPC. First, the existence of obstacles in the environment introduces non-convex state constraints, which results in non-convex MPC problems. It is still challenging to obtain real-time, safe and stable solutions for non-convex MPCs. An efficient optimization algorithm, i.e., the convex feasible set (CFS) algorithm \cite{liu2018convex}, has been proposed to obtain a safe open-loop trajectory in real time. However, there are many local optima due to non-convexity. Therefore, even the trajectory calculated by CFS at each MPC time step is feasible and smooth, it is possible that the trajectories planned at different time steps will jump around multiple local optima causing the implemented trajectory to be dynamically unreasonable for the robot. Dynamically unreasonable closed-loop trajectory will cause the robot to execute violent or zigzagging movement that is harmful to the robot's motors and also scares human in the environment. A standard analytical approach to verify properties of non-convex MPC is needed so that we can estimate the MPC closed-loop performance and stability. 
 
+\begin{comment}
+Some work focused on MPC problems with non-convex cost function using the sequential convex optimization method \cite{hovgaard2013nonconvex}. Although the result is promising, the difficulty of ensuring closed-loop stability and analyzing controller performance for non-convex MPC is also mentioned in the literature. 
 
 A standard analytical approach to verify properties of non-convex MPC is needed so that we can estimate whether the trajectory implemented by the MPC controller is smooth and desirable, i.e., the trajectories planned at different time steps do not jump around multiple local optima, and the result of this analysis can serve as an indication of the MPC controller’s stability properties.
+\end{comment}
 
-The contribution of this paper is to provide a new method to analyze the stability of this kind of non-convex MPC problem. In this paper, we first introduce a new notion of stability property called $M$-analysis and then analyze the properties of the proposed algorithm,  non-convex MPC that implements CFS (MPC-CFS). The relationships among the optimal trajectories generated at different steps will be examined, so as to guarantee that the robot trajectory will not experience sudden jumps during trajectory execution. The proposed method addresses the limitation of traditional stability analysis, and can further assure that the planning result is executable for the robot. Simulation studies are performed to test the performance of the implemented CFS  algorithm in the MPC framework. The stability features are analyzed using the proposed method. Finally, experiment is carried to verify the algorithm.
+The second problem is that the constraints in the optimization change continuously through out time due to the change in the environment. The fact that optimization problems are sensitive to the constraints make the open-loop trajectory at each time step varies largely. This again will result in dynamically unreasonable closed-loop trajectory. Fortunately, with some assumptions, it is possible to formulate the uncertainties in the MPC problem in a proper way. Some works have been focusing on dealing with uncertainties in MPC problems  \cite{ chisci2001systems, kuwata2007distributed}. In these papers, systems under persistent disturbance can be controlled by robust MPC. However, a more common scenario in motion planning problems is to have uncertainties in the environment, e.g., environment that has speed-variant objects. Therefore, a probabilistic model of objects' future movement is needed. In \cite{luders2010chance}, Stochastic MPC deals with probability constraints to handle uncertainties in the environment. Another approach is to directly predict the object's future motion. This paper focuses on industrial HRI environment \cite{goodrich2008human, kruse2013human}, where the uncertainties in the environment are usually caused by human workers. It is clear that although the workers do not explicitly reveal their intention, it is still possible to predict their future motion based on past observations \cite{y2018a,butepage2017anticipating}. In \cite{kumar2013learning}, Bayesian filter is used for motion prediction given observation in the past and the state transition model. 
+
+
+
+
+The contribution of this paper is to provide a new MPC, environment uncertainty adaptive MPC (EUA-MPC), which observes the environment and predicts human intention to construct the state space for the optimization problem at each executing time step. The proposed EUA-MPC can better deal with environment uncertainties which addresses the limitation of traditional MPC. To show that EUA-MPC performs better than traditional MPS owing to a better knowledge of the dynamic environment, the closed-loop cost of the EUA-MPC is compared with the traditional MPC. It is also assured that EUA-MPC is stable theoretically in the seance of Lyapunov in a set of common factory scenarios. A new notion of closed-loop stability property called $M$-analysis  \cite{jess2018mstable} is used to examine the open-loop trajectory convergence, which serve as another indicator of the closed-loop performance of the EUA-MPC. Simulation studies are performed to test the performance of the implemented EUA-MPC. Finally, experiment is carried to verify the algorithm.
 
 The remainder of the paper is organized as follows. Section II provides the problem formulation. Section III shows simulation results. Section IV shows the experiment result (code is publicly available at {\tt\small github.com/msc-berkeley/MPC-CFS-Matlab}). Section V concludes the paper.
 
@@ -118,10 +132,10 @@ The remainder of the paper is organized as follows. Section II provides the prob
       \label{fig:slack}
 \end{figure}
 
-\subsection{Problem and Notations}
+\subsection{Traditional Non-convex MPC and Notations}
 In MPC (Fig.~\ref{fig:MPCsystem}), at each time step $t$, a future trajectory will be planned by solving an optimization problem. This trajectory is denoted as $\mathbf{x}_{k} := [x_k, x_{k+1},x_{k+2},\cdots,x_{k+H}]$ where the state, $x_k$, is called the $k^{th}$ action location. $H$ is the prediction horizon. In this paper, $x_k= [x(k)\quad y(k)]^{\intercal}$ that contains the $x$ and $y$ coordinate of the robot's location in 2-dimensional Cartesian space at time step $t=k$. Note that $x_k$ corresponds to the current position at time step $t=k$. The trajectory will then be executed and the robot will go to $x_{k+1}$, the $k+1^{th}$ action location, which is the planned action location for the robot at time step $t=k+1$. The sampling time between two time steps is a constant, denoted as $\Delta t$. After reaching the next action location, the robot will again solve the optimization problem and plan a new trajectory and repeat the process. To avoid confusion, the current time step can also be marked as superscript in some cases , e.g., $x_{k+1}^k$ means the planned action location $x_{k+1}$ at time step $t=k$.
 
-At time step $k=t$, given the current state, denoted as $x_0(t=k) = (x,y)|_{t=k}$, the following optimization needs to be solved to obtain $\mathbf{x}_k$,
+At time step $t=k$, given the current state, denoted as $x_0(t=k) = (x,y)|_{t=k}$, the following optimization needs to be solved to obtain $\mathbf{x}_k$,
 
 
 \begin{eqnarray}
@@ -144,29 +158,17 @@ where $C_1$ is the coefficient of the first term, which penalizes the robot's de
 The state constraint $\Gamma$ is non-convex and its complement is a collection of disjoint convex sets, i.e., each of the obstacle-region is itself convex.
 \end{assumption}
 
-Since the robot dynamics is not included in the MPC problem, a tracking controller is needed. The overall system is shown in Fig.~\ref{fig:MPCsystem}. Although the planned trajectory  is feasible, tracking error will occur in real world experiment, causing the state ends up to be infeasible. This results in a violent motion because the control command according to the new planning result will immediately pull the robot out of the infeasible area. In order to avoid such problem, we introduce  $\mathbf{S}$, the slack variable vector. Introducing slack variables allows the states to violate the original constraint, which is the margin boundary of the obstacles (Fig.~\ref{fig:slack}). However these slack variables are also added to the cost function so that the violation is penalized \cite{chen2018foad}. The new problem is shown in the following:
+Since the robot dynamics is not included in the MPC problem, a tracking controller is needed. The overall system is shown in Fig.~\ref{fig:MPCsystem}. Although the planned trajectory  is feasible, tracking error will occur in real world experiment, causing the state ends up to be infeasible. This results in a violent motion because the control command according to the new planning result will immediately pull the robot out of the infeasible area. In order to avoid such problem, we introduce  $\mathbf{S}^k = [s^k_{k+1},s^k_{k+2},\ldots,s^k_{k+H}]$, the slack variable vector. Introducing slack variables allows the states to violate the original constraint, which is the margin boundary of the obstacles (Fig.~\ref{fig:slack}). However these slack variables are also added to the cost function so that the violation is penalized \cite{chen2018foad}. The new problem is shown in the following:
 
 \begin{eqnarray}
-&\min_{\mathbf{x}_{k}} & J(\mathbf{x}_k) + \|\mathbf{S}\|_{2}^2 ,\\
-&s.t.& x_{k+i} \in\Gamma(s_{k+i}),\forall i=1,\ldots,H,\\
+&\min_{\mathbf{x}_{k}} & J(\mathbf{x}_k) + \|\mathbf{S^k}\|_{2}^2 ,\\
+&s.t.& x_{k+i} \in\Gamma(s^k_{k+i}),\forall i=1,\ldots,H,\\
 &&         x_{k}=x_0(k).
 \end{eqnarray} 
 
 The final trajectory is $[x_k^k,x_{k+1}^{k+1},\ldots]$, which is equivalent to $[x_{k}^{k-1},x_{k+1}^{k},\ldots]$ (Fig.~\ref{fig: mpc}). As the problem is non-convex, it is possible that the planned trajectories calculated at different time steps enter into different local optima, hence the stability is hard to characterize. 
 
-\subsection{$M$-Analysis for analyzing stability properties}
-In this paper, we propose a new way, $M$-analysis, to analyzing stability properties.
-We say that an action location, $x_{k}$, is $M$-settling if for $k-M< t\leq k$, the last $M$ time steps at $x_{k}$ satisfy: $\|x_{k}^t-x_k^{t-1}\|\leq \|x_k^{t-1}-x_k^{t-2}\|$ or $\bigl|\|x_{k}^t-x_k^{t-1}\|-\|x_k^{t-1}-x_k^{t-2}\|\bigr|\leq \delta$, where $\delta$ is a small threshold. In Fig.~\ref{fig:m-stable}, the pink-orange-color circles are the action location $x_{k}$ planned at different time steps that are  tested for $M$-settling property of $x_{k}$. The notation implies that the planned state $x_k$ would have smaller and smaller change on each predicted action location between consecutive time steps after time step $k-M$. Under the condition that the environment in the future time step is not going to change much, we say that the non-convex MPC is $M$-settling if the above inequalities holds for all $k$. This result can also be expressed as saying the output solutions are all close to one local optimum after time step $k-M$. Note that the problem is always $1$-settling, since $\|x_{k}^t-x_k^{t-1}\|=0$.
 
-Having such property is good for the robot. $M$-analysis guarantees that the action location will not change much, and therefore, guarantees smoothness of the output trajectory. If M is sufficiently large, the robot system will not experience sudden change. Moreover, since the planned trajectory is usually tracked by a low-level tracking controller, the larger the $M$ is, the smoother the control commend would be.
-
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=9cm]{src/Mstable.png}
-\caption{Illustration of $M$-analysis.}
-\label{fig:m-stable}
-\end{center}
-\end{figure}
 
 
 \subsection{The Convex Feasible Set Algorithm}
@@ -212,6 +214,69 @@ In this paper, we will show that the system is stable through simulation. Theore
 %
 %Claim that $\|x_{k+i}^{k+1}-x_{k+i}^k\|<\lambda\|x_{k+i+1}^{k+1}-x_{k+i+1}^k\|$ for some $\lambda<1$.
 
+\subsection{Human movement prediction and tracking}
+In a factory setting, human workers and mobile robots usually have other tasks to complete after stopping from moving. This means they are going to stay in an area for an amount of time which is likely long enough for the ego robot to consider them as static objects with margin, and plan a path to go around them. Therefore, it is important to know whether the obstacle is going to stop. Denote the past position of the obstacle at time $t$ to be $x_{obs}(t)$, the past path of the obstacle is $\mathbf{h}_{obs}^k = [x_{obs}(1), x_{obs}(2),\ldots, x_{obs}(k)]^\top$. With $\mathbf{h}_{obs}^k$, denote the probability for the obstacle to continue moving and to stop to be $p_{go}(k)$ and $p_{stop}(k)$ respectively ($p_{go}(k)+p_{stop}(k)=1$). $r_1$ and $r_2$ are the learning rates ($r_1 >1 $ and $0<r_2<1$) and $b$ is the bias term. We have a the prediction algorithm: 
+
+\begin{algorithm}
+\caption{The prediction algorithm}\label{alg:euclid}
+\begin{algorithmic}[1]
+\Procedure{MovementPred}{$\mathbf{h}_{obs}^k,p_{go}(k-1), p_{stop}(k-1)$}
+\State $vel_{k-1}, vel_{k} \gets getVel(\mathbf{h}_{obs}^k)$
+\If {$vel_{k-1} \leq vel_{k}$}
+    \State $w_{go} \gets r_1p_{go}(k-1)$
+    \State $w_{stop} \gets r_2p_{stop}(k-1)+b$
+\Else
+    \State $w_{go} \gets r_2p_{go}(k-1)+b$
+    \State $w_{stop} \gets r_1p_{stop}(k-1)$
+    
+\EndIf
+\State $p_{go}(k), p_{stop}(k) \gets normalize(w_{go},w_{stop})$
+\State \textbf{return} $p_{go}(k), p_{stop}(k)$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Although the worker/robot has stopped, it is still possible that the he/she will have movement within the working area. Therefore, the ego robot needs to know potentially how big the area is by observing the movement when the worker/robot is working. A naive Bayesian filter-based method is presented to track the obstacle (e.g., other moving robots or human workers) and give a safety margin according to the past movements that the robot should keep from the obstacle .
+
+Each past position has an associated weight $p(x_{obs}(k))$, and the weight vector for $\mathbf{h}_{obs}^k$ is $\mathbf{p}_{obs}^k = [p(x_{obs}(1)), p(x_{obs}(2)),\ldots, p(x_{obs}(k))]^\top$. In each executing time step, $\mathbf{p}_{obs}^k$ is updated:
+\begin{equation}
+\begin{split}
+\mathbf{p'}_{obs}^k =& \big[\;[\;\gamma\mathbf{p}_{obs}^{k-1}]^\top \;1\; \big]^\top \\
+\mathbf{p}_{obs}^k =& \frac{\mathbf{p'}_{obs}^k}{\norm{ \mathbf{p'}_{obs}^k }_1},
+\end{split}
+\end{equation}
+where $\gamma$ is the discount constant ($\gamma < 0 $). Denote the uncertainty index as $\sigma(k) = std({\mathbf{p}_{obs}^k}^\top \mathbf{h}_{obs}^k)$. Path that has bigger position change for the last several time steps will result in larger $\sigma(k)$. This can serve as an indicator of position uncertainty in the future under the assumption that the current jumpy movement will be passed on at least to the next time step.  
+
+
+
+
+\subsection{State space formulation and stability}
+From the previous section, we divided the obstacle movement into two mode, moving mode and working (stop) mode. Since it is unrealistic to conclude anything when the obstacle is still in the moving mode, we focus on the working mode. Denote $k_w$ to be the time when the worker/robot switch to working mode. In the following, we construct the state space during working mode ($k>k_{w}$) with the information presented in the previous section. 
+Denote the high-dimensional obstacle region in the open-loop trajectory space at each executing time step as $\mathbf{O}^t(x_0(k),\sigma(k))$. Consider a special case where the obstacle is moving back and forth in the working area, with proper initialization of $\mathbf{O}^0$, $\mathbf{O}^t$ satisfies the relationship $\mathbf{O}^k \subseteq \mathbf{O}^{k-1}$ for all $k>k_{working}$. Denote $\Gamma^k$ as the complement of $\mathbf{O}^k$ such that $\mathbf{x}_k \in \Gamma^k$ and $\Gamma^{k-1} \subseteq \Gamma^k$ for all $k>k_{working}$. The EUA-MPC problem is:
+
+\begin{eqnarray}
+J^*(x_0(k))=&\min_{\mathbf{x}_{k}} & J(\mathbf{x}_k) + \|\mathbf{S^k}\|_{2}^2 ,\\
+&s.t.& \mathbf{x}_k \in \Gamma^t(x_0(k),\sigma(k),\mathbf{S^k}),\\
+&&         x_{k}=x_0(k).
+\end{eqnarray} 
+
+Since the cost function is time-invariant and quadratic, $\Gamma^{k-1} \subseteq \Gamma^k$ implies that the cost of the optimal open-loop trajectory $J^*(x_k) \leq J^*(x_{k-1})$ for all $k>k_{w}$, and therefore, EUA-MPC is stable in the seance of Lyapunov for all $k>k_{w}$ before encountering a new obstacle.  
+
+
+
+\subsection{$M$-Analysis for analyzing stability properties}
+In this paper, we propose a new way, $M$-analysis, to analyzing stability properties.
+We say that an action location, $x_{k}$, is $M$-settling if for $k-M< t\leq k$, the last $M$ time steps at $x_{k}$ satisfy: $\|x_{k}^t-x_k^{t-1}\|\leq \|x_k^{t-1}-x_k^{t-2}\|$ or $\bigl|\|x_{k}^t-x_k^{t-1}\|-\|x_k^{t-1}-x_k^{t-2}\|\bigr|\leq \delta$, where $\delta$ is a small threshold. In Fig.~\ref{fig:m-stable}, the pink-orange-color circles are the action location $x_{k}$ planned at different time steps that are  tested for $M$-settling property of $x_{k}$. The notation implies that the planned state $x_k$ would have smaller and smaller change on each predicted action location between consecutive time steps after time step $k-M$. Under the condition that the environment in the future time step is not going to change much, we say that the non-convex MPC is $M$-settling if the above inequalities holds for all $k$. This result can also be expressed as saying the output solutions are all close to one local optimum after time step $k-M$. Note that the problem is always $1$-settling, since $\|x_{k}^t-x_k^{t-1}\|=0$.
+
+Having such property is good for the robot. $M$-analysis guarantees that the action location will not change much, and therefore, guarantees smoothness of the output trajectory. If M is sufficiently large, the robot system will not experience sudden change. Moreover, since the planned trajectory is usually tracked by a low-level tracking controller, the larger the $M$ is, the smoother the control commend would be.
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=9cm]{src/Mstable.png}
+\caption{Illustration of $M$-analysis.}
+\label{fig:m-stable}
+\end{center}
+\end{figure}
 
 \section{SIMULATION RESULT AND DISCUSSION}
 The simulation scenario in this work is similar to that of mobile robots operating in factories. To test our algorithm, three kinds of scenarios will be considered. The first one is a static scenario where the environment  is completely known, while the other two are dynamic scenarios where the robot will observe changes in the environment.
