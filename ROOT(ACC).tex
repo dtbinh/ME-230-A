@@ -30,8 +30,10 @@
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{amsmath}               
   {
-    \newtheorem{assumption}{Assumption}
+    \newtheorem{assumption}{\textbf{Assumption}}
+    
   }
+
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
 \IEEEoverridecommandlockouts                              % This command is only needed if 
                                                           % you want to use the \thanks command
@@ -99,7 +101,7 @@ Some work focused on MPC problems with non-convex cost function using the sequen
 A standard analytical approach to verify properties of non-convex MPC is needed so that we can estimate whether the trajectory implemented by the MPC controller is smooth and desirable, i.e., the trajectories planned at different time steps do not jump around multiple local optima, and the result of this analysis can serve as an indication of the MPC controller’s stability properties.
 \end{comment}
 
-The second problem is that the constraints in the optimization change continuously through out time due to the change in the environment. The fact that optimization problems are sensitive to the constraints make the open-loop trajectory at each time step varies largely. This again will result in dynamically unreasonable closed-loop trajectory. Fortunately, with some assumptions, it is possible to formulate the uncertainties in the MPC problem in a proper way. Some works have been focusing on dealing with uncertainties in MPC problems  \cite{ chisci2001systems, kuwata2007distributed}. In these papers, systems under persistent disturbance can be controlled by robust MPC. However, a more common scenario in motion planning problems is to have uncertainties in the environment, e.g., environment that has speed-variant objects. Therefore, a probabilistic model of objects' future movement is needed. In \cite{luders2010chance}, Stochastic MPC deals with probability constraints to handle uncertainties in the environment. Another approach is to directly predict the object's future motion. This paper focuses on industrial HRI environment \cite{goodrich2008human, kruse2013human}, where the uncertainties in the environment are usually caused by human workers. It is clear that although the workers do not explicitly reveal their intention, it is still possible to predict their future motion based on past observations \cite{y2018a,butepage2017anticipating}. In \cite{kumar2013learning}, Bayesian filter is used for motion prediction given observation in the past and the state transition model. 
+The second problem is that the constraints in the optimization change continuously through out time due to the change in the environment. The fact that optimization problems are sensitive to the constraints make the open-loop trajectory at each time step varies largely. This again will result in dynamically unreasonable closed-loop trajectory. Fortunately, with some assumptions, it is possible to formulate the uncertainties in the MPC problem in a proper way. Some works have been focusing on dealing with uncertainties in MPC problems  \cite{ chisci2001systems, kuwata2007distributed}. In these papers, systems under persistent disturbance can be controlled by robust MPC. However, a more common scenario in motion planning problems is to have uncertainties in the environment, e.g., environment that has speed-variant objects. Therefore, a probabilistic model of objects' future movement is needed. In \cite{luders2010chance}, Stochastic MPC deals with probability constraints to handle uncertainties in the environment. Another approach is to directly predict the object's future motion. This paper focuses on industrial HRI environment \cite{goodrich2008human, kruse2013human}, where the uncertainties in the environment are usually caused by human workers. It is clear that although the workers do not explicitly reveal their intention, it is still possible to predict their future motion based on past observations \cite{butepage2017anticipating}. In \cite{kumar2013learning}, Bayesian filter is used for motion prediction given observation in the past and the state transition model. 
 
 
 
@@ -120,7 +122,7 @@ The remainder of the paper is organized as follows. Section II provides the prob
 
 \begin{figure}[t]
       \centering
-      \includegraphics[width=6cm]{plot/MPCsystem.pdf}
+      \includegraphics[width=6cm]{plot/system.pdf}
       \caption{The overall system control design. }
       \label{fig:MPCsystem}
 \end{figure}
@@ -147,15 +149,15 @@ At time step $t=k$, given the current state, denoted as $x_0(t=k) = (x,y)|_{t=k}
 The current state is measured and assigned to the first entry of $\mathbf{x}_{k}$. Note that the optimization problem for each time step is time-invariant. There are two assumptions in this formulation: 
 
 \begin{assumption}[Cost]
-The cost function is convex and regular, and has the following form
+\textit{The cost function is convex and regular, and has the following form}
 \begin{equation}
-J(\mathbf{x}_k) = C_1\|\mathbf{D}\mathbf{x}_k-\mathbf{d}\|_{2}^2 + C_2 \|\mathbf{V}\mathbf{x}_k-\mathbf{v}_{ref}\|_2^2 +C_3\|\mathbf{A}\mathbf{x}_{k}\|_2^2,  
+J(\mathbf{x}_k) = C_1\|\mathbf{D}\mathbf{x}_k-\mathbf{d}\|_{2}^2 + C_2 \|\mathbf{V}\mathbf{x}_k-\mathbf{v}_{ref}\|_2^2 +C_3\|\mathbf{A}\mathbf{x}_{k}\|_2^2.  
 \end{equation}
 \end{assumption}
-where $C_1$ is the coefficient of the first term, which penalizes the robot's deviation from a reference line so that the robot output trajectory is not too irregular. Matrix $\mathbf{D}$ is a projection matrix that extract all $y$'s from $\mathbf{x}_k$. $C_2$ is the coefficient of the second term, which penalizes the speed profile of the planned trajectory with regard to a constant speed so that the robot will be time efficient. $\mathbf{V}\mathbf{x}_k$ is the velocity vector. Here, the speed reference is set to be a constant speed going along the positive $x$-axis. $C_3$ is the coefficient of the third term, which penalizes the acceleration of the output trajectory so that the motion will be smooth. $\mathbf{A}\mathbf{x}_{k}$ is the acceleration vector.
+Here $C_1$ is the coefficient of the first term, which penalizes the robot's deviation from a reference line so that the robot output trajectory is not too irregular. Matrix $\mathbf{D}$ is a projection matrix that extract all $y$'s from $\mathbf{x}_k$. $C_2$ is the coefficient of the second term, which penalizes the speed profile of the planned trajectory with regard to a constant speed so that the robot will be time efficient. $\mathbf{V}\mathbf{x}_k$ is the velocity vector. Here, the speed reference is set to be a constant speed going along the positive $x$-axis. $C_3$ is the coefficient of the third term, which penalizes the acceleration of the output trajectory so that the motion will be smooth. $\mathbf{A}\mathbf{x}_{k}$ is the acceleration vector.
 
 \begin{assumption}[Constraint]
-The state constraint $\Gamma$ is non-convex and its complement is a collection of disjoint convex sets, i.e., each of the obstacle-region is itself convex.
+\textit{The state constraint $\Gamma$ is non-convex and its complement is a collection of disjoint convex sets, i.e., each of the obstacle-region is itself convex.}
 \end{assumption}
 
 Since the robot dynamics is not included in the MPC problem, a tracking controller is needed. The overall system is shown in Fig.~\ref{fig:MPCsystem}. Although the planned trajectory  is feasible, tracking error will occur in real world experiment, causing the state ends up to be infeasible. This results in a violent motion because the control command according to the new planning result will immediately pull the robot out of the infeasible area. In order to avoid such problem, we introduce  $\mathbf{S}^k = [s^k_{k+1},s^k_{k+2},\ldots,s^k_{k+H}]$, the slack variable vector. Introducing slack variables allows the states to violate the original constraint, which is the margin boundary of the obstacles (Fig.~\ref{fig:slack}). However these slack variables are also added to the cost function so that the violation is penalized \cite{chen2018foad}. The new problem is shown in the following:
@@ -197,7 +199,7 @@ Because of the construction above, the optimal solution is $\mathbf{x}_{k+1}^{o}
 Note that $J(\mathbf{x}_{k+1}^{r})\leq J(\mathbf{x}_{k+1}^{o})\leq J(\mathbf{x}_{k+1}^{u})$, therefore, the cost of the trajectory is always bounded. 
 The executed trajectory is from those $\mathbf{x}_{k+1}^{o}$ for different $k$.
 
-
+\begin{comment}
 \subsection{Converging property with CFS}
 In this paper, we will show that the system is stable through simulation. Theoretical proof is left as future work. But here we sketch the procedures. First, we can show that at two consecutive time steps, the difference between the early state should be strictly smaller than the difference between any future state, i.e., $\|x_{k+i}^{k+1}-x_{k+i}^k\|<\lambda\|x_{k+i+1}^{k+1}-x_{k+i+1}^k\|$ for some $\lambda<1$ and for $i$ sufficiently small. Then we can show that the state is bounded and the difference between the same state at different time steps keeps decreasing.
 %the KKT condition is satisfied, i.e.,
@@ -213,16 +215,17 @@ In this paper, we will show that the system is stable through simulation. Theore
 %\end{eqnarray}
 %
 %Claim that $\|x_{k+i}^{k+1}-x_{k+i}^k\|<\lambda\|x_{k+i+1}^{k+1}-x_{k+i+1}^k\|$ for some $\lambda<1$.
-
-\subsection{Human movement prediction and tracking}
+\end{comment}
+\subsection{Human Movement Prediction and Tracking}
 In a factory setting, human workers and mobile robots usually have other tasks to complete after stopping from moving. This means they are going to stay in an area for an amount of time which is likely long enough for the ego robot to consider them as static objects with margin, and plan a path to go around them. Therefore, it is important to know whether the obstacle is going to stop. Denote the past position of the obstacle at time $t$ to be $x_{obs}(t)$, the past path of the obstacle is $\mathbf{h}_{obs}^k = [x_{obs}(1), x_{obs}(2),\ldots, x_{obs}(k)]^\top$. With $\mathbf{h}_{obs}^k$, denote the probability for the obstacle to continue moving and to stop to be $p_{go}(k)$ and $p_{stop}(k)$ respectively ($p_{go}(k)+p_{stop}(k)=1$). $r_1$ and $r_2$ are the learning rates ($r_1 >1 $ and $0<r_2<1$) and $b$ is the bias term. We have a the prediction algorithm: 
 
 \begin{algorithm}
 \caption{The prediction algorithm}\label{alg:euclid}
 \begin{algorithmic}[1]
 \Procedure{MovementPred}{$\mathbf{h}_{obs}^k,p_{go}(k-1), p_{stop}(k-1)$}
-\State $vel_{k-1}, vel_{k} \gets getVel(\mathbf{h}_{obs}^k)$
-\If {$vel_{k-1} \leq vel_{k}$}
+\State Acc $\gets getAcc(\mathbf{h}_{obs}^k)$
+\State endVel $\gets PredictEndVel(Acc,x_{obs}(k))$
+\If {endVel $ \leq $ threshold}
     \State $w_{go} \gets r_1p_{go}(k-1)$
     \State $w_{stop} \gets r_2p_{stop}(k-1)+b$
 \Else
@@ -241,7 +244,7 @@ Although the worker/robot has stopped, it is still possible that the he/she will
 Each past position has an associated weight $p(x_{obs}(k))$, and the weight vector for $\mathbf{h}_{obs}^k$ is $\mathbf{p}_{obs}^k = [p(x_{obs}(1)), p(x_{obs}(2)),\ldots, p(x_{obs}(k))]^\top$. In each executing time step, $\mathbf{p}_{obs}^k$ is updated:
 \begin{equation}
 \begin{split}
-\mathbf{p'}_{obs}^k =& \big[\;[\;\gamma\mathbf{p}_{obs}^{k-1}]^\top \;1\; \big]^\top \\
+\mathbf{p'}_{obs}^k =& \big[\;[\;\gamma\mathbf{p}_{obs}^{k-1}]^\top \;1\; \big]^\top, \\
 \mathbf{p}_{obs}^k =& \frac{\mathbf{p'}_{obs}^k}{\norm{ \mathbf{p'}_{obs}^k }_1},
 \end{split}
 \end{equation}
@@ -250,25 +253,51 @@ where $\gamma$ is the discount constant ($\gamma < 0 $). Denote the uncertainty 
 
 
 
-\subsection{State space formulation and stability}
+\subsection{State Space Formulation and Stability}
 From the previous section, we divided the obstacle movement into two mode, moving mode and working (stop) mode. Since it is unrealistic to conclude anything when the obstacle is still in the moving mode, we focus on the working mode. Denote $k_w$ to be the time when the worker/robot switch to working mode. In the following, we construct the state space during working mode ($k>k_{w}$) with the information presented in the previous section. 
 Denote the high-dimensional obstacle region in the open-loop trajectory space at each executing time step as $\mathbf{O}^t(x_0(k),\sigma(k))$. Consider a special case where the obstacle is moving back and forth in the working area, with proper initialization of $\mathbf{O}^0$, $\mathbf{O}^t$ satisfies the relationship $\mathbf{O}^k \subseteq \mathbf{O}^{k-1}$ for all $k>k_{working}$. Denote $\Gamma^k$ as the complement of $\mathbf{O}^k$ such that $\mathbf{x}_k \in \Gamma^k$ and $\Gamma^{k-1} \subseteq \Gamma^k$ for all $k>k_{working}$. The EUA-MPC problem is:
 
 \begin{eqnarray}
 J^*(x_0(k))=&\min_{\mathbf{x}_{k}} & J(\mathbf{x}_k) + \|\mathbf{S^k}\|_{2}^2 ,\\
-&s.t.& \mathbf{x}_k \in \Gamma^t(x_0(k),\sigma(k),\mathbf{S^k}),\\
+&s.t.& \mathbf{x}_k \in \Gamma^k(x_0(k),\sigma(k),\mathbf{S^k}),\\
 &&         x_{k}=x_0(k).
 \end{eqnarray} 
 
 Since the cost function is time-invariant and quadratic, $\Gamma^{k-1} \subseteq \Gamma^k$ implies that the cost of the optimal open-loop trajectory $J^*(x_k) \leq J^*(x_{k-1})$ for all $k>k_{w}$, and therefore, EUA-MPC is stable in the seance of Lyapunov for all $k>k_{w}$ before encountering a new obstacle.  
 
+\subsection{Overall System}
 
+The overall system (Fig.~\ref{fig:MPCsystem}) goes through a process as shown below in ever executing time step.
+
+\begin{algorithm}
+\caption{The prediction algorithm}\label{alg:euclid}
+\begin{algorithmic}[1]
+\While{EUA-MPC} 
+\State $GetInformation()$
+\If {ObstacleMode $== moving$}
+    \State traditional state space as in (6)
+\Else
+    \State EUA-state space as in (13)  
+\EndIf
+\State $\mathbf{x}_{ref} \gets Initialize(x_0(k))$
+\State $\mathbf{x}_k \gets CFS(\mathbf{x}_{ref},x_0(k),\Gamma^k)$
+\State $[v ,\:\omega]_k^\top \gets LQR(\mathbf{x}_k)$ 
+\State ego robot execute control input
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+ 
 
 \subsection{$M$-Analysis for analyzing stability properties}
-In this paper, we propose a new way, $M$-analysis, to analyzing stability properties.
-We say that an action location, $x_{k}$, is $M$-settling if for $k-M< t\leq k$, the last $M$ time steps at $x_{k}$ satisfy: $\|x_{k}^t-x_k^{t-1}\|\leq \|x_k^{t-1}-x_k^{t-2}\|$ or $\bigl|\|x_{k}^t-x_k^{t-1}\|-\|x_k^{t-1}-x_k^{t-2}\|\bigr|\leq \delta$, where $\delta$ is a small threshold. In Fig.~\ref{fig:m-stable}, the pink-orange-color circles are the action location $x_{k}$ planned at different time steps that are  tested for $M$-settling property of $x_{k}$. The notation implies that the planned state $x_k$ would have smaller and smaller change on each predicted action location between consecutive time steps after time step $k-M$. Under the condition that the environment in the future time step is not going to change much, we say that the non-convex MPC is $M$-settling if the above inequalities holds for all $k$. This result can also be expressed as saying the output solutions are all close to one local optimum after time step $k-M$. Note that the problem is always $1$-settling, since $\|x_{k}^t-x_k^{t-1}\|=0$.
+In this paper, we propose a new way, $M$-analysis, to analyzing transient of the planned open-loop trajectory from one planning instance to the next.
 
-Having such property is good for the robot. $M$-analysis guarantees that the action location will not change much, and therefore, guarantees smoothness of the output trajectory. If M is sufficiently large, the robot system will not experience sudden change. Moreover, since the planned trajectory is usually tracked by a low-level tracking controller, the larger the $M$ is, the smoother the control commend would be.
+\textbf{\textit{Definition 1}} \textit{($M$-stability):}
+\textit{We say that an action location, $x_{k}$, is $M$-stable if for $k-M< t\leq k$, the last $M$ time steps at $x_{k}$ satisfy: $(i) \;\|x_{k}^t-x_k^{t-1}\|\leq \|x_k^{t-1}-x_k^{t-2}\|$ or $(ii) \;\bigl|\|x_{k}^t-x_k^{t-1}\|-\|x_k^{t-1}-x_k^{t-2}\|\bigr|\leq \delta$, when $\bigl|\|x_{k}^t-x_k^{t-1}\|\leq \epsilon$ where $\delta$ and $\epsilon$ are small threshold.}
+
+
+In Fig.~\ref{fig:m-stable}, the pink-orange-color circles are the action location $x_{k}$ planned at different time steps that are  tested for $M$-stable property of $x_{k}$. The conditions imply that the planned state $x_k$ would have smaller and smaller change ($(i)$) or sufficiently small change ($(ii)$) on each predicted action location between consecutive time steps after time step $k-M$. Under the condition that the environment in the future time step is not going to change much, we say that the MPC is $M$-stable if the above inequalities holds for all $k$. This result can also be expressed as saying the output solutions are all close to one local optimum after time step $k-M$. 
+
+Having such property is good for the robot. $M$-stability guarantees that the action location will not change much, and therefore, guarantees smoothness of the output trajectory. If M is sufficiently large, the robot system will not experience sudden change. Moreover, since the planned trajectory is usually tracked by a low-level tracking controller, the larger the $M$ is, the smoother the control command would be.
 
 \begin{figure}[t]
 \begin{center}
@@ -279,8 +308,61 @@ Having such property is good for the robot. $M$-analysis guarantees that the act
 \end{figure}
 
 \section{SIMULATION RESULT AND DISCUSSION}
-The simulation scenario in this work is similar to that of mobile robots operating in factories. To test our algorithm, three kinds of scenarios will be considered. The first one is a static scenario where the environment  is completely known, while the other two are dynamic scenarios where the robot will observe changes in the environment.
-The goal for the robot is to move along a line, $y=0$, in the positive $x$-axis direction, while maintaining a constant speed which also points along the positive $x$-axis. 
+The simulation scenario in this work is similar to that of mobile robots operating in factories. To test our algorithm and see the improvement of the proposed method, two kinds of scenarios will be considered. The goal for the robot is to move along a line, $y=0$, in the positive $x$-axis direction, while maintaining a constant speed which also points along the positive $x$-axis. The first one is a cluster dynamic scenario where the robot will observe a few changes in the environment. The second one is a scenario where a worker walks to a place on the ego robots path and works in the area. 
+
+\begin{comment}
+\subsection{Result of scenario with initially unknown moving obstacle}
+In this scenario, there exists a moving obstacle, which is not observed by the robot at the beginning. Once the robot sees this obstacle, it also gets the information of the obstacle's dynamics, and therefore, is able to predict the future position of the obstacle and conduct planning accordingly. 
+
+
+In Fig.~\ref{fig:3_3}, the existence of the third obstacle on the right is unknown to the robot at the beginning. The obstacle is assumed to be moving in constant speed once detected. However, the obstacle will change its speed at some point after detection. In the simulation, after time step $t=20$, the obstacle changes its speed and from moving along negative $x$-axis to positive $y$-axis. From Fig.~\ref{fig:3_3} (b), we can see that the robot adjusts the planned trajectory to best utilize the space once it detects the speed change and avoids the obstacles successfully. From the $M$-analysis plot of this scenario (Fig.~\ref{fig:3_4}), we can also see that the system maintains $15$-settling even though the environment is changing though out time. The result indicates that as long as there is no sudden change accruing close before an action location is executed, the robot can best utilize the new information and successfully plan a smooth trajectory with both traditional MPC and EUA-MPC.
+
+To show the limitation of traditional MPC, an extreme case is tested. We make the blue obstacle oscillate its moving speed between $-1$ and $1$ on the $y$ direction at every time step. The action locations near the obstacle (around $k=40$) have a zigzagging shape and in Fig.~\ref{fig:badM}, these action locations also show a decrease in $M$. This indicates that the trajectory is jumping among local optima and we can say that the MPC controller performance is not as stable compared with the previous scenarios.
+
+\begin{figure}[t]
+      \centering
+      \subfloat[Simulation result of scenario that has initially unknown moving obstacles (with speed change).\label{fig:3_3}]{\input{plot/move.tex}}\\
+      \subfloat[$M$-analysis for scenario that has initially unknown moving obstacles (with speed change).\label{fig:3_4}]{\input{plot/moveM.tex}}\\
+      \subfloat[$M$-analysis for scenario that has oscillating moving obstacles.\label{fig:badM}]{\input{plot/bad1_M.tex}}
+      
+      \caption{Scenario that has initially unknown moving obstacles (with speed change).}
+      
+\end{figure}
+\end{comment}
+
+\subsection{Result of scenario with share-space working area}
+
+To show that the proposed EUA-MPC can tackle the problem in the previous section, we design a scenario which is common in human-robot share-space working area. The goal for the robot is the same as in the previous. In the beginning, the human worker walks (walking mode) in constant acceleration towards and stops around $y=0$. Once the worker stops, he/she starts to work in the area and moves back and forth in a small range(working mode). To successfully pass the working area, the robot needs to be able to determine the size of the working area and not be overreacting to the human small but inconsistent movement. 
+
+Simulation results are shown in Fig.~\ref{fig:t_wo} and Fig.~\ref{fig:t_w}. We can see that EUA-MPC has a overall smooth closed-loop trajectory, while traditional MPC experience oscillation on the open-loop prediction due to the worker's small movement in working mode. In corresponding, Fig.~\ref{fig:m_w} also shows that EUA-MPC recovers faster than traditional MPC (Fig.~\ref{fig:m_wo}) after the worker switch to working mode. In Fig.~\ref{fig:c_open} we can see that having the knowledge of the size of the working area, EUA-MPC can plan safely around the worker while not being overreacting to the small movement of the worker. On the other hand, traditional MPC reacts strongly to the speed change and results in open-loop trajectory with high cost. In Fig.~\ref{fig:c_close} we can see that the cost with EUA-MPC is the same as traditional MPC in the first 13 steps but noticeably smaller afterwords. This is because EUA-MPC can better utilize the share-space therefore has better overall performance.
+\begin{figure}[t]
+      \centering
+      \subfloat[Simulation result with traditional MPC.\label{fig:t_wo}]{\input{plot/tr_wo.tex}}\\
+      \subfloat[Simulation result with EUA-MPC.\label{fig:t_w}]{\input{plot/tr_w.tex}}    
+      
+      \caption{Scenario that has oscillating moving obstacles.}      
+\end{figure}
+
+
+\begin{figure}[t]
+      \centering     
+      \subfloat[$M$-analysis for simulation result with traditional MPC.\label{fig:m_wo}]{\input{plot/m_stable_wo.tex}}\\
+      \subfloat[$M$-analysis for simulation result with EUA-MPC.\label{fig:m_w}]{\input{plot/m_stable.tex}}\\
+      \subfloat[Comparison on open-loop cost between traditional MPC and EUA-MPC.\label{fig:c_open}]{\input{plot/cost_open.tex}}\\
+      \subfloat[Comparison on closed-loop cost between traditional MPC and EUA-MPC.\label{fig:c_close}]{\input{plot/Cost_close.tex}}     
+      
+      \caption{Performance comparison between MPC and EUA-MPC.}
+      
+\end{figure}
+
+
+
+
+
+
+
+\begin{comment}
+
 
 
 \subsection{Result of scenario with single static obstacle}
@@ -343,10 +425,12 @@ The $M$-analysis discussed previously can also be applied to this scenario even 
 
 
 \subsection{Result of scenario with initially unknown moving obstacle}
-In this scenario, there exists a moving obstacle, which is not observed by the robot at the beginning. Once the robot sees this obstacle, it also gets the information of the obstacle's dynamics, and therefore, is able to predict the future position of the obstacle and conduct planning accordingly. 
+In this scenario, there exist two static obstacles (shown in green) and a moving obstacle (shown in blue). The moving obstacle is not observed by the robot at the beginning. Once the robot sees this obstacle, it also observes the obstacle's movements and assume that the obstacle is moving in constant acceleration. Therefore, the ego robot is able to predict the future position of the obstacle and conduct planning accordingly. 
 
 
-In Fig.~\ref{fig:3_3}, the existence of the third obstacle on the right is unknown to the robot at the beginning. The obstacle is assumed to be moving in constant speed once detected. However, the obstacle will change its speed at some point after detection. In the simulation, after time step $t=20$, the obstacle changes its speed and from moving along negative $x$-axis to positive $y$-axis. From Fig.~\ref{fig:3_3} (b), we can see that the robot adjusts the planned trajectory to best utilize the space once it detects the speed change and avoids the obstacles successfully. From the $M$-analysis plot of this scenario (Fig.~\ref{fig:3_4}), we can also see that the system maintains $15$-settling even though the environment is changing though out time. The result indicates that as long as there is no sudden change accruing close before an action location is executed, the robot can best utilize the new information and successfully plan a smooth trajectory.
+In Fig.~\ref{fig:3_3}, the moving obstacle is assumed to be moving in constant speed once detected since the acceleration observed is zero. However, the obstacle will change its speed at some point after detection. In the simulation, after time step $t=20$, the obstacle changes its speed and from moving along negative $x$-axis to positive $y$-axis. From Fig.~\ref{fig:3_3} (b), we can see that the robot adjusts the planned trajectory to best utilize the space once it detects the speed change and avoids the obstacles successfully. From the $M$-analysis plot of this scenario (Fig.~\ref{fig:3_4}), we can also see that the system maintains $15$-settling even though the environment is changing though out time. The result indicates that as long as there is no sudden change accruing close before an action location is executed, the robot can best utilize the new information and successfully plan a smooth trajectory with both traditional MPC and EUA-MPC.
+
+To show the limitation of traditional MPC, an extreme case is tested.  
 
 
 
@@ -359,8 +443,6 @@ In Fig.~\ref{fig:3_3}, the existence of the third obstacle on the right is unkno
       
 \end{figure}
 
-
-
 \subsection{$M$-analysis with less stable trajectory}
 
 This section shows that $M$-analysis can also point out the action locations in the implemented trajectory which is dynamically unreasonable. Such trajectory occurs when the environment changes rapidly. In this simulation scenario, we use random initial trajectory and also make the blue obstacle oscillate its moving speed between $-1$ and $1$ on the $y$ direction at every time step. From Fig.~\ref{fig:bad1} we can see that the action locations near the obstacle (around $k=40$) have a zigzagging shape and in Fig.~\ref{fig:badM}, these action locations also show a decrease in $M$. This indicates that the trajectory is jumping among local optima and we can say that the MPC controller performance is not as stable compared with the previous scenarios.
@@ -370,23 +452,14 @@ This section shows that $M$-analysis can also point out the action locations in 
       \subfloat[Simulation scenario resulting in dynamically unreasonable trajectory.\label{fig:bad1}]{\input{plot/bad1.tex}}\\
       \subfloat[$M$-analysis for scenario that resulting in dynamically unreasonable trajectory.\label{fig:badM}]{\input{plot/bad1_M.tex}}
       
-      \caption{Scenario resulting in dynamically unreasonable trajectory.}
-      
+      \caption{Scenario resulting in dynamically unreasonable trajectory.}    
 \end{figure}
-
-
 
 \subsection{Relationship between $M$ and $H$}
 
 In industries, choosing a prediction horizon to be large enough is a common way to guarantee stability \cite{mayne2000constrained}. Therefore, we examined the relationship between the prediction horizon $H$ and the resulting $M$ for $M$-analysis. The scenario that has unknown moving obstacle is used here. Define the largest possible $M$ at each action location as $M_{max,k}$, where $M_{max,k} = k-1$ for $k\leq H+1$, and $M_{max,k} = H$ for $k>H+1$. In Fig.~\ref{fig:HM20}, systems with larger ($H>20$) prediction horizon reach $20$-settling (which is a guarantee that the location will not change much within 20 sampling steps before it is executed) faster than the system with $H=20$. Interestingly, all these systems reach $M=20$ in the range after $k=27$, which is the critical action location, but before $k=32$, whereas system with $H=20$ reaches $20$-settling not until after $k=45$. Figure~\ref{fig:HM} shows the smallest $M$ after $k$ reaches $H+1$ for each prediction horizon. It is clear that the smallest $M$ among all action location increase with $H$. Note that large $H$ makes the problem computationally heavy, which should be avoided if possible. We conclude that the horizon can be considered large enough if it can cover the last critical action location, in this case, when $H>27$.
 
-
  
-
-
-
-
-
 
 
 \begin{figure}[t]
@@ -402,7 +475,6 @@ In industries, choosing a prediction horizon to be large enough is a common way 
       \caption{Smallest $M$ for each prediction horizon. }
       \label{fig:HM}
 \end{figure}
-
 
 \begin{figure*}
  \centering
@@ -436,9 +508,6 @@ In industries, choosing a prediction horizon to be large enough is a common way 
   \caption{Experiment result of robot avoiding an obstacle.}
   \label{fig:ex}
 \end{figure*} 
-
-
-\section{EXPERIMENT RESULT}
 
 \subsection{Experiment set up}
 To verify whether the planned trajectory is dynamically reasonable for a mobile robot to execute, the MPC-CFS (with $H=20$) controller is tested on TurtleBot3, which is  developed by ROBOTIS. TurtleBot3 is a ROS standard platform robot. The MPC-CFS controller is running in MATLAB on a separate laptop with an 2.8GHz Intel Core i7-7700HQ.
@@ -474,14 +543,26 @@ The proposed $M$-analysis can also be applied in this scenario. If we use the or
       \caption{$M$-analysis for the experiment. }
       \label{fig:msettling}
 \end{figure}
+\end{comment}
 
 
+\section{EXPERIMENT RESULT}
 
+
+\subsection{Experiment set up}
+To verify the performance, the EUA-MPC (with $H=20$) controller is tested on TurtleBot3, which is  developed by ROBOTIS. TurtleBot3 is a ROS standard platform robot. The MPC-CFS controller is running in MATLAB on a separate laptop with an 2.8GHz Intel Core i7-7700HQ. An iterative LQR (ILQR) controller \cite{tassa2012synthesis} is used for better tracking performance.
+
+\subsection{Experiment result}
+Similar to the simulation scenario, we have the ego robot running EUA-MPC and another remote-controlled robot representing the worker.
+
+The experiment result is shown in Fig.~\ref{fig:ex} and Fig.~\ref{fig:trajectory}, where we can see that the robot can successfully avoid the obstacle and merge back to the original route without over reacting to the worker's movement in the working area. Control command is shown in Fig.~\ref{fig:command}.
+
+The proposed $M$-analysis can also be applied in this scenario. If we use the original planning problem ((1)$\sim$(3)), the infeasible starting state at each time step will cause the robot to move in a violent manner. However, after introducing slack variables, the planning results in smoother trajectory. From Fig.~\ref{fig:msettling} we can see that after the first several steps, the whole system maintains at least $13$-settling. After passing by the obstacle ($k>80$), $M$ goes to and maintains at $20$, which indicates that the robot has settled back to track $y=0$. 
 
 
 \section{Conclusion}
 
-This paper proposed a new method of analyzing stability properties for non-convex MPC. The proposed method, $M$-analysis, considered the difference of each action location planned at consecutive time steps. We said the action location $k$ is $M$-settling if there is smaller and smaller change between consecutive time steps after time step $k-M$ which indicates local conversions of the planned trajectory. Simulation results showed that a robot that implemented the MPC-CFS algorithm was capable of dealing with dynamic environment as long as the changes in the environment were predictable. The stability analysis using $M$-analysis was performed to show that MPC-CFS had decent stability properties. Finally, experiment on Turtlebot3 showed that the proposed MPC-CFS controller performed well. In the future, we will include the robot dynamics in to the optimization problem formulation and complete the theoretical proof for $M$-analysis. 
+This paper proposed a new method, EUA-MPC to handle common time-variant scenario in industrial HRI system. To better utilize the shared space, a movement tracking and predicting module determined what the worker/robot's mode was and keep track of the uncertainty index. Given these information, EUA-MPC constructed a proper state space for the optimization problem and the result was implemented which completed one EUA-MPC loop. To evaluate the proposed method, $M$-analysis, considered the local convergence of the open-loop trajectory. Simulation results showed that a robot that implemented the EUA-MPC was capable of dealing with dynamic environment, resulting in a smooth closed-loop trajectory, even if the motion of the worker/robot's was not predictable, as long as the switch in between modes were not frequent. It was also shown that the cost was reduced sufficiently in EUA-MPC for both open-loop cost and closed-loop cost. Finally, experiment on Turtlebot3 showed that the proposed EUA-MPC controller performed well. In the future, we will improve the movement tracking and predicting module so that EUA-MPC can deal with more complicated environments. 
 
 
 
